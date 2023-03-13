@@ -1,0 +1,29 @@
+.holi{
+    background-image: url(./Image/img10.png);
+    /* background-position: right top; */
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    height: 500px;
+}
+.borders{
+    border-bottom: 6px solid red;
+    /* border-bottom: inherit; */
+    height: 200px;
+    width: 50%;
+    background-color: rgb(103, 163, 235);
+  }
+.borders1{
+    border: 1px solid rgb(242, 243, 250);
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+  }
+
+  .pic{
+    
+    width: 100%;
+    height: auto;
+    
+   
+  }
+ 

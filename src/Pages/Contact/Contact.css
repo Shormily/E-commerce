@@ -1,0 +1,21 @@
+input[type=text] {
+    outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue;
+  /* width: 500px; */
+  }
+  input:focus {
+    border-color: green
+  }
+  textarea{
+    outline: 0;
+  border-width: 0 0 2px;
+  border-color: blue;
+  width: 500px;
+  }
+
+  span .fa{
+   
+    color:  #a517ba
+
+}

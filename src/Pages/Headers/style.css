@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'M PLUS 1', sans-serif;
+    font-weight: 900;
+    
+    
+}
+
+.nav-font{
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  line-height: 2;
+}
+
+
+
+/* =========== Navbar =========== */
+
+.nav-bar {
+ 
+    justify-content: center;
+    
+  }
+
+  /* nav link  */
+.nav-link {
+    font-size: 20px;
+    color: #f0f0f6 !important;
+    font-family: 'M PLUS 1', sans-serif;
+    font-weight: 900;
+    padding: 5px 10px;
+    margin-left: 15px;
+    position: relative;
+    transition: 0.4s;
+    justify-content: center;
+  }
+.font{
+  font-family: 'M PLUS 1', sans-serif;
+    font-weight: 900;
+}
+
+.icon{
+  color: #af0b1e;
+  font-size: 40px;
+}
+  /* navlink hover  */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(255, 237, 123) ;
+    transition: 0.4s;
+    justify-content: center;
+  }
+
+  .nav-link:hover {
+    color: rgb(255, 237, 123) !important;
+  }
+  .nav-link:hover.nav-link::after {
+    width: 100%;
+  }
+
+  .user-img {
+    width: 70px;
+    border-radius: 50%;
+    height: 70px;
+    /* margin-left: 20px; */
+   
+  }
+  .pragraph-header{
+    font-size: 30px;
+    color: rgb(184, 23, 23);
+    word-spacing: 3px;
+  }
+
+  .nav-toggle{
+    background-color: #f0f0f6;
+  }
+
+  .user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-left: 20px;
+  }
+.bg-colors{
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+    
+}
+.textcolor{
+    color: white;
+    font-size: 20px;
+    /* padding-right: 20px; */
+  
+}
+.banner{
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+}
+
+.playbtn{
+    width: 45px;
+    margin: 20px;
+}
+.navimg{
+    height: 40px;
+    padding-left: 20px;
+}
+
+.banner a{
+    color: #fff;
+    text-decoration: none;
+}
+.bottom-img{
+    width: 100%;
+}
+
+/* ---------about */
+
+.about-text{
+    align-items: center;
+    margin: 0;
+
+  }
