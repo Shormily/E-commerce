@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Box from "../Box/Box";
+import Footer from "../Footer/Footer";
 import Header from "../Headers/Header";
 
 
@@ -7,7 +8,7 @@ const Service = () => {
   const [services, setServices] = useState([]);
   // fetch("http://localhost:5000/services")
   useEffect(() => {
-    fetch("./products.JSON")
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -40,6 +41,7 @@ const Service = () => {
           
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

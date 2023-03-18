@@ -1,22 +1,22 @@
 import * as React from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import "./Table.css";
 
-function createData(name, trackingId, date, status) {
-  return { name, trackingId, date, status };
+import "./Table.css";
+import Table from 'react-bootstrap/Table';
+import { useState } from "react";
+import Orders from "../Orders/Orders";
+
+
+function createData(name, trackingId, date, status,number) {
+  return { name, trackingId, date, status,number };
 }
 
 const rows = [
-  createData("Lasania Chiken Fri", 18908424, "2 March 2022", "Approved"),
-  createData("Big Baza Bang ", 18908424, "2 March 2022", "Pending"),
-  createData("Mouth Freshner", 18908424, "2 March 2022", "Approved"),
-  createData("Cupcake", 18908421, "2 March 2022", "Delivered"),
+  createData("Lasania Chiken Fri", 18908424, "2 March 2022", "Approved",1),
+  createData("Big Baza Bang ", 18908424, "2 March 2022", "Pending",2),
+  createData("Mouth Freshner", 18908424, "2 March 2022", "Approved",3),
+  createData("Cupcake", 18908421, "2 March 2022", "Delivered",4),
+  createData("Roubina", 18908431, "2 March 2022", "Delivered",5),
+  createData("Monika", 18908428, "2 March 2022", "Delivered",6),
 ];
 
 
@@ -44,10 +44,11 @@ const makeStyle=(status)=>{
 }
 
 export default function BasicTable() {
+  
   return (
-      <div className="Table Cards ">
+      <div className="Table Cards bg-light  ">
      
-        <TableContainer
+        {/* <TableContainer
           component={Paper}
           style={{ boxShadow: "0px 13px 20px 0px #80808029" }}
           m={5}
@@ -81,7 +82,30 @@ export default function BasicTable() {
               ))}
             </TableBody>
           </Table>
-        </TableContainer>
+        </TableContainer> */}
+        <Table  hover>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th> Name</th>
+          <th>TrackingId</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      {rows.map((row) => (  <tbody>
+        <tr>
+          <td>{row.number}</td>
+          <td > {row.name}</td>
+          <td>{row.trackingId}</td>
+          <td>{row.date}</td>
+          <td>{row.status}</td>
+          
+        </tr>
+      
+      </tbody>
+       ))}
+    </Table>
       </div>
   );
 }

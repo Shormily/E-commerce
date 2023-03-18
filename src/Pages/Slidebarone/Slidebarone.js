@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import "./Sidebar.css";
-
+import React from 'react';
 import Nav from "react-bootstrap/Nav";
 
 import { NavLink } from "react-router-dom";
@@ -12,25 +10,10 @@ import {
   CDBSidebarMenu,
   CDBSidebarMenuItem,
 } from "cdbreact";
-import useFirebase from "../Hook/useFirebase";
-
-const Sidebar = () => {
-  const { user, logout } = useFirebase();
-  const [selected, setSelected] = useState(0);
-
-  const [expanded, setExpaned] = useState(true);
-
-  const sidebarVariants = {
-    true: {
-      left: "0",
-    },
-    false: {
-      left: "-60%",
-    },
-  };
-  console.log(window.innerWidth);
-  return (
-    <div div className="sidebar">
+const Slidebarone = () => {
+    return (
+        <>
+            <div div className="sidebar">
       <div
       className="position-sticky sticky-left "
         style={{ display: "flex", height: "100vh", overflow: "scroll initial" }}
@@ -48,7 +31,7 @@ const Sidebar = () => {
 
           <CDBSidebarContent className="sidebar-content bg-colors ">
             <CDBSidebarMenu className="bg-colors">
-              <Nav.Link>
+              {/* <Nav.Link>
                 <CDBSidebarMenuItem icon="columns" className="fnt">
                   Dashboard
                 </CDBSidebarMenuItem>
@@ -57,7 +40,14 @@ const Sidebar = () => {
                 <CDBSidebarMenuItem icon="shop" className="fnt">
                   Order
                 </CDBSidebarMenuItem>
+              </Nav.Link> */}
+              <Nav.Link as={NavLink} to="/dashboard">
+                <CDBSidebarMenuItem icon="columns" className="fnt">
+                Dashboard
+                </CDBSidebarMenuItem>
               </Nav.Link>
+             
+            
               <Nav.Link>
                 <CDBSidebarMenuItem icon="table" className="fnt">
                   Tables
@@ -90,13 +80,13 @@ const Sidebar = () => {
                   SignIn
                 </CDBSidebarMenuItem>
               </Nav.Link>
-           
             </CDBSidebarMenu>
           </CDBSidebarContent>
         </CDBSidebar>
       </div>
-    </div>
-  );
+    </div>   
+        </>
+    );
 };
 
-export default Sidebar;
+export default Slidebarone;

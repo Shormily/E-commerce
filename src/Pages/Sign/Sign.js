@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
 import useFirebase from '../Hook/useFirebase';
 import "./Sign.css";
 import Header from '../Headers/Header';
+import Footer from '../Footer/Footer';
 
 const Sign = () => {
   const {signInUsingGoogle,createNewUserByEmail} = useFirebase();
@@ -75,6 +76,19 @@ return;
           const user =result.user;
           createNewUserByEmail()
           console.log(user)
+          const userData = {
+            email: user.email,
+            role : 'buyer'
+          }
+          fetch(`http://localhost:5000/users`,{
+            method: 'POST',
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(userData)
+          })
+          .then(res=> res.json())
+          .then(data => console.log(data))
           setError('Successfully Sign In!!Now Go To Another Page');
           verifyEmail();
       })
@@ -195,6 +209,7 @@ return;
        
         </div>
       </div>
+      <Footer/>
         </>
     );
 };

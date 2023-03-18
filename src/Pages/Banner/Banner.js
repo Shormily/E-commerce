@@ -11,7 +11,7 @@ const Banner = () => {
         <div className="container ">
           <div className="row about-text">
             <div className="col-lg-6 col-md-12 col-sm-12">
-              <h1 className="text-light mt-5">This is a Gradient page</h1>
+              <h1 className="text-light mt-5">E-Commerce Website</h1>
               <p className="text-light">
                 Dolor et rebum justo labore aliquyam labore. Eos invidunt tempor
                 voluptua amet diam ipsum clita elitr. Dolor takimata ea erat.

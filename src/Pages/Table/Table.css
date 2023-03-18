@@ -1,11 +1,4 @@
-.MuiTableRow-root > * {
-    padding: 10px;
-  }
-  
-  .MuiTableRow-root.MuiTableRow-head > * {
-    font-weight: bold !important;
-  }
-  
+
   .Table td,
   th {
     border: none !important;
@@ -19,9 +12,7 @@
     border-radius: 9px;
   }
   
-  .Details {
-    color: #00b5ff !important;
-  }
+  
   
   @media screen and (max-width: 1200px) {
     .Table {

@@ -40,7 +40,7 @@ const useFirebase = () => {
 
         Swal.fire(
           'Successfully Sign In!',
-          'Welcome to our Chinese Resturent',
+          'Welcome to our E-commerce website',
           'success'
         )
         setUser(result.user);

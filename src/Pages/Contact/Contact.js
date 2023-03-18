@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import "./Contact.css"
 import { HiChevronDoubleRight } from "react-icons/hi"; 
 import Header from '../Headers/Header';
+import Footer from '../Footer/Footer';
 
 const Contact = () => {
     return (
@@ -93,7 +94,8 @@ const Contact = () => {
           </div>
         </Container> */}
      
-    </section>   
+    </section>  
+    <Footer/> 
         </>
     );
 };

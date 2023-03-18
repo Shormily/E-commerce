@@ -21,7 +21,7 @@ const Card = ({service}) => {
               <AiFillStar size={28}/><AiFillStar size={28}/><AiFillStar size={28}/><AiFillStar size={28}/><AiFillStar size={28}/>
               </div>
               <p className='px-2 text-center'>{description}</p>
-              <h4 className='text-center  text-primary'>${dolr}</h4>
+              <h4 className='text-center  text-primary'>$20</h4>
            <p className='text-center  mt-3 '>{explain}</p>
             <div className="btnservice p-2">
             <NavLink as={NavLink} to={`/checkout/${_id}`}
@@ -33,10 +33,7 @@ const Card = ({service}) => {
                 Details <HiChevronDoubleRight size={25}/>
               </button>
               </NavLink>
-              {/* <NavLink as={NavLink} to={`/checkout/${_id}`}
-                 >
-                <button className='btnsdesigns  px-4 pragraph-weight text-light bg-primary rounded-2'  >Book Now </button>
-                </NavLink> */}
+           
              
             </div>
           </div>
